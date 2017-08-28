@@ -1,0 +1,25 @@
+.products-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.product-img{
+  height: 200px;
+}
+
+.product-item{
+  margin: 10px;
+  text-align: center;
+  width: 40%;
+}
+
+.btn{
+  color: white;
+  background: pink;
+}
+
+.btn:hover{
+ background: lightblue; 
+}

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import Cart from './Cart.jsx'
+import '../css/nav.css'
 
 export default class Nav extends React.Component {
   render(props){
@@ -36,7 +38,12 @@ export default class Nav extends React.Component {
                 <a className="nav-link"><Link to="login">Log In</Link></a>
               </li>
 
+              <li className="nav-item active">
+                <a className="nav-link"><Link to="search">Search</Link></a>
+              </li>
+
             </ul>
+            <Cart />
             <form className="form-inline my-2 my-lg-0">
               <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"/>
               <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -50,6 +57,8 @@ export default class Nav extends React.Component {
   }
 
 }
+
+
 
 // <Products title="Products"/>
 // <BestSellers />

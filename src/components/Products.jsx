@@ -1,34 +1,34 @@
 import React from 'react'
-import Brands from './Brands.jsx';
+import GetProducts from './GetProducts.jsx';
+import '../css/products.css'
 
 export default class Products extends React.Component {
   render(props) {
     return(
       <div className="products-list">
-        <h1>{this.props.title}</h1>
-        <Brands brandName="almay" title="Almay"/>
-        <Brands brandName="annabelle" title="Annabelle" />
-        <Brands brandName="benefit" />
-        <Brands brandName="covergirl" />
-        <Brands brandName="dalish" />
-        <Brands brandName="essie" />
-        <Brands brandName="iman" />
-        <Brands brandName="l'oreal" />
-        <Brands brandName="marcelle" />
-        <Brands brandName="maybelline" />
-        <Brands brandName="milani" />
-        <Brands brandName="misa" />
-        <Brands brandName="mistura" />
-        <Brands brandName="moov" />
-        <Brands brandName="nyx" />
-        <Brands brandName="orly" />
-        <Brands brandName="pacifica" />
-        <Brands brandName="revlon" />
-        <Brands brandName="sante" />
-        <Brands brandName="smashbox"/>
-        <Brands brandName="stila"/>
-        <Brands brandName="suncoat"/>
-        <Brands brandName="zorah"/>
+        <GetProducts brandName="almay" />
+        <GetProducts brandName="annabelle" />
+        <GetProducts brandName="benefit" />
+        <GetProducts brandName="covergirl" />
+        <GetProducts brandName="dalish" />
+        <GetProducts brandName="essie" />
+        <GetProducts brandName="iman" />
+        <GetProducts brandName="l'oreal" />
+        <GetProducts brandName="marcelle" />
+        <GetProducts brandName="maybelline" />
+        <GetProducts brandName="milani" />
+        <GetProducts brandName="misa" />
+        <GetProducts brandName="mistura" />
+        <GetProducts brandName="moov" />
+        <GetProducts brandName="nyx" />
+        <GetProducts brandName="orly" />
+        <GetProducts brandName="pacifica" />
+        <GetProducts brandName="revlon" />
+        <GetProducts brandName="sante" />
+        <GetProducts brandName="smashbox"/>
+        <GetProducts brandName="stila"/>
+        <GetProducts brandName="suncoat"/>
+        <GetProducts brandName="zorah"/>
       </div>
       );
   }
