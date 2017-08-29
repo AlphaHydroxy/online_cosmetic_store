@@ -30,32 +30,21 @@ class Cart extends React.Component{
   }
 
   render() {
-    var currentBasket = JSON.parse(localStorage.getItem('basketItems'));
-    debugger;
-      var totalPrice = currentBasket.map(makeup => makeup.price).reduce((a, b) => { return parseFloat(a) + parseFloat(b); }, 0);
-      console.log(totalPrice);
-      const makeUpDetails = currentBasket.map((makeUp, index) => {
-          return (
-              <h5>{makeUp.name}</h5>
-            );
-      });
-      return (
-        <div>
-          {makeUpDetails}
-        </div>
+      var currentBasket = JSON.parse(localStorage.getItem('basketItems'));
+      debugger;
+        var totalPrice = currentBasket.map(makeup => makeup.price).reduce((a, b) => { return parseFloat(a) + parseFloat(b); }, 0);
+        console.log(totalPrice);
+        const makeUpDetails = currentBasket.map((makeUp, index) => {
+            return (
+                <h5>{makeUp.name}</h5>
+              );
+        });
+        return (
+          <div>
+            {makeUpDetails}
+          </div>
         )
     }
-
-    // return (
-    //   <div className = "bank-box">
-    //     <h1>{this.props.title}</h1>
-    //     <div>Cart total = {this.state.total}</div>
-    //     <input type="number" name="amount" value={this.state.amount} onChange={this.handleChange.bind(this)} />
-    //     <button onClick={ () => {this.addToCart()} }>Add</button>
-    //     <button onClick={ () => {this.removeFromCart()} }>Remove</button>
-    //   </div>
-    //   );
-  // }
 }
 
 Cart.propTypes = {
