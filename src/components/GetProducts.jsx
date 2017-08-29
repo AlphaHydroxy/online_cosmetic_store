@@ -34,7 +34,7 @@ class Brands extends Component {
     if(!this.state.makeUpData) {
       
       // console.log("render");
-      return <p>loading</p>;
+      return <img src="../../public/favicon.png" alt="loading... " />;
     }
     const makeUpDetails = this.state.makeUpData.map((makeUp, index) => {
         return (
@@ -46,18 +46,17 @@ class Brands extends Component {
             <p>£{makeUp.price}</p>
             <p>{makeUp['product_colors'].hex_value}</p>
             <p>{makeUp['product_colors'].colour_name}</p>
-            <button className="btn btn-sm" data-toggle="modal" data-target={'#' + makeUp.id}>Buy Now</button>
+            <button className="btn btn-sm" data-toggle="modal" data-target={'#' + makeUp.id}>more...</button>
 
-            <div className="modal fade" id={makeUp.id} tabindex="-1">
+            <div className="modal fade" id={makeUp.id} tabIndex="-1">
               <div className="modal-dialog modal-lg">
                 <div className="modal-content">
                   <div className="modal-header">
-                    <h1>product</h1>
                     <h5>{makeUp.name}</h5>
                     <img className="product-img" src={makeUp.image_link} alt={makeUp.name} />
-
+                    <p>{makeUp.description}</p> 
                     <p>£{makeUp.price}</p>
-                    <button class="btn btn-primary" onClick={() => this.buy(makeUp)}> Buy! </button>ß
+                    <button className="btn btn-primary" onClick={() => this.buy(makeUp)}> Add to cart! </button>
                     </div>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import GetProducts from './GetProducts.jsx';
-import '../css/products.css'
+import '../sass/products.css'
 
 export default class Products extends React.Component {
   render(props) {

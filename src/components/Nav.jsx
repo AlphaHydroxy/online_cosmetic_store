@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import Cart from './Cart.jsx'
-import '../css/nav.css'
+import '../sass/nav.css'
 
 export default class Nav extends React.Component {
   render(props){
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg">
         <Link to="/"><a className="navbar-brand">MakeApp</a></Link>
           <button 
               className="navbar-toggler" 
@@ -16,7 +16,11 @@ export default class Nav extends React.Component {
               aria-controls="navbarSupportedContent" 
               aria-expanded="false" 
               aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon">
+              <div className="hamburger"></div>
+              <div className="hamburger"></div>
+              <div className="hamburger"></div>
+            </span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -41,13 +45,10 @@ export default class Nav extends React.Component {
               <li className="nav-item active">
                 <a className="nav-link"><Link to="search">Search</Link></a>
               </li>
-
             </ul>
-            <Cart />
-            <form className="form-inline my-2 my-lg-0">
-              <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"/>
-              <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+
+              <Cart />
+
           </div>
 
         </nav>
@@ -58,7 +59,10 @@ export default class Nav extends React.Component {
 
 }
 
-
+//            <form className="form-inline my-2 my-lg-0">
+//              <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"/>
+//              <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+//            </form>
 
 // <Products title="Products"/>
 // <BestSellers />

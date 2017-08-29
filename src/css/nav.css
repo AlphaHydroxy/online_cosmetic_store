@@ -1,8 +1,26 @@
-.navbar{
-  background-color: black;
-  color: white;
-}
-
-.nav-link{
-  color: white;
-}
+.navbar {
+  background-color: #000; }
+  .navbar .navbar-brand {
+    font-family: 'Lobster', cursive;
+    font-size: 30px; }
+  .navbar li {
+    margin-left: 20px; }
+    .navbar li a {
+      color: #FFF;
+      font-family: 'Raleway', sans-serif;
+      text-decoration: none; }
+      .navbar li a:hover {
+        color: #FFC0CB;
+        text-decoration: none; }
+  .navbar .navbar-toggler-icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer; }
+    .navbar .navbar-toggler-icon .hamburger {
+      height: 3px;
+      width: 100%;
+      background: #FFF;
+      border-radius: 20px;
+      padding: 2px 3px; }

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import FontAwesome from 'react-fontawesome'
+import '../sass/cart.css'
 
 class Cart extends React.Component{
 
@@ -31,17 +33,38 @@ class Cart extends React.Component{
 
   render() {
       var currentBasket = JSON.parse(localStorage.getItem('basketItems'));
-      debugger;
         var totalPrice = currentBasket.map(makeup => makeup.price).reduce((a, b) => { return parseFloat(a) + parseFloat(b); }, 0);
-        console.log(totalPrice);
+        
+        var numOfItems = currentBasket.length;
+
         const makeUpDetails = currentBasket.map((makeUp, index) => {
             return (
                 <h5>{makeUp.name}</h5>
               );
         });
         return (
-          <div>
-            {makeUpDetails}
+          <div className="cart-container">
+            <p className="item-count">{numOfItems}</p>
+  
+            <FontAwesome
+                    data-toggle="modal"
+                    data-target="#show-cart"
+                    className='cart-icon'
+                    name='shopping-cart'
+                    size='2x'
+                    // spin
+                  />
+            <div className="modal fade" id="show-cart" tabIndex="-1">
+              <div className="modal-dialog modal-lg">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    
+                    <button>Checkout</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
           </div>
         )
     }

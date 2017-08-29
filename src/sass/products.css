@@ -19,3 +19,7 @@
 
 .btn:hover {
   background: lightblue; }
+
+.modal-header {
+  display: flex;
+  flex-direction: column; }

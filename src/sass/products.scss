@@ -1,4 +1,31 @@
-.products-list {
-  background-color: pink;
+.products-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 
+.product-img{
+  height: 200px;
+}
+
+.product-item{
+  margin: 20px;
+  text-align: center;
+  width: 250px;
+  height: 400px;
+}
+
+.btn{
+  color: white;
+  background: pink;
+}
+
+.btn:hover{
+ background: lightblue; 
+}
+
+.modal-header{
+  display: flex;
+  flex-direction: column;
 }

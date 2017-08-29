@@ -1,0 +1,25 @@
+.cart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 120px;
+  height: 50px; }
+  .cart-container .item-count {
+    background-color: pink;
+    width: 23px;
+    height: 23px;
+    border-radius: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    margin: 0; }
+  .cart-container .cart-icon {
+    color: white;
+    cursor: pointer; }
+    .cart-container .cart-icon:hover {
+      color: #FFC0CB;
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg); }
