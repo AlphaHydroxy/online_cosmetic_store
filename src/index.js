@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './index.css';
-import App from './App';
 import Home from './components/Home.jsx';
 import Products from './components/Products.jsx';
 import BestSellers from './components/BestSellers.jsx';

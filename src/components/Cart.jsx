@@ -39,7 +39,11 @@ class Cart extends React.Component{
 
         const makeUpDetails = currentBasket.map((makeUp, index) => {
             return (
+              <div>
                 <h5>{makeUp.name}</h5>
+                <img src={makeUp.image_link} alt={makeUp.name}/>
+                <h5>{makeUp.price}</h5>
+                </div>
               );
         });
         return (
@@ -58,7 +62,8 @@ class Cart extends React.Component{
               <div className="modal-dialog modal-lg">
                 <div className="modal-content">
                   <div className="modal-header">
-                    
+                    <h1>{makeUpDetails}</h1>
+                    <h5>Total: {totalPrice}</h5>
                     <button>Checkout</button>
                     </div>
                   </div>

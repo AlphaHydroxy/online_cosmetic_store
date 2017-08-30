@@ -1,0 +1,116 @@
+$impactFont: 'Impact', sans-serif;
+
+.section-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.carousel{
+  height: 400px;
+  width: 800px;
+
+  .img-fluid{
+    height: 400px;
+    width: 800px;
+  }
+}
+
+.delivery-signup-sctn{
+  height: 400px;
+  width: 464px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $impactFont;
+
+  .signup{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    input[type=submit]{
+      background-color: #000;
+      color: #FFF;
+      cursor: pointer;
+    }
+  }
+
+  .delivery-container{
+    background-color: #000;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+
+    .delivery-header{
+      color: #FFF;
+      letter-spacing: 3px;
+      
+    }
+
+    .find-out-more{
+      color: #FFF;
+      text-decoration: underline;
+    }
+  }
+}
+
+.img-with-overlay {
+  position: relative;
+  width: 702px;
+  height: 405px;
+
+  &:hover .overlay {
+    opacity: .5;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000;
+
+    .text {
+      font-family: 'Lobster', cursive;
+      color: rgba(255,255,255,.5);
+      font-size: 90px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.trio-img-container{
+  width: 100%;
+  height: 330px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.img{
+  width: 33.3%;
+  border: 1px black solid;
+  height: 330px;
+}

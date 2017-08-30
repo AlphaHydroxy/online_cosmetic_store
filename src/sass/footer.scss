@@ -1,0 +1,32 @@
+.footer-container{
+  height: 140px;
+  width: 100%;
+  border-top: 1px grey solid;
+  background-color: #000;
+
+  .footer-details-row{
+    display: flex;
+    flex-direction: row;
+    
+    .footer-items{
+      width: 25%;
+      color: #FFF; 
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      padding: 20px;
+      text-decoration: underline;
+    }
+  }
+
+  .social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+
+    .social-icon{
+      padding: 20px 20px;
+    }
+  }
+}
+

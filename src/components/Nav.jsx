@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import Cart from './Cart.jsx'
 import '../sass/nav.css'
 
@@ -8,7 +7,7 @@ export default class Nav extends React.Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg">
-        <Link to="/"><a className="navbar-brand">MakeApp</a></Link>
+        <a href="/"className="navbar-brand">MakeApp</a>
           <button 
               className="navbar-toggler" 
               type="button" data-toggle="collapse" 
@@ -27,23 +26,23 @@ export default class Nav extends React.Component {
             <ul className="navbar-nav mr-auto">
 
               <li className="nav-item active">
-                <a className="nav-link"><Link to="products">Products</Link></a>
+                <a href="products"className="nav-link">Products</a>
               </li>
 
               <li className="nav-item active">
-                <a className="nav-link"><Link to="bestsellers">Best Sellers</Link></a>
+                <a href="bestsellers" className="nav-link">Best Sellers</a>
                 </li>
 
               <li className="nav-item active">
-                <a className="nav-link"><Link to="getintouch">Get In Touch</Link></a>
+                <a href="getintouch" className="nav-link">Get In Touch</a>
               </li>
 
               <li className="nav-item active">
-                <a className="nav-link"><Link to="login">Log In</Link></a>
+                <a href="login" className="nav-link">Log In</a>
               </li>
 
               <li className="nav-item active">
-                <a className="nav-link"><Link to="search">Search</Link></a>
+                <a href="search" className="nav-link">Search</a>
               </li>
             </ul>
 
