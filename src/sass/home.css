@@ -38,7 +38,8 @@
     text-align: center; }
     .delivery-signup-sctn .delivery-container .delivery-header {
       color: #FFF;
-      letter-spacing: 3px; }
+      letter-spacing: 3px;
+      font-size: 18px; }
     .delivery-signup-sctn .delivery-container .find-out-more {
       color: #FFF;
       text-decoration: underline; }

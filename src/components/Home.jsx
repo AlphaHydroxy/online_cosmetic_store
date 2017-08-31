@@ -53,7 +53,7 @@ export default class Home extends React.Component {
         </section>
 
         <section className="section-row">
-          <iframe width="560px" height="405px" title="tutorial" src="https://www.youtube.com/embed/w3p3dBhQYko" frameborder="0" allowfullscreen>
+          <iframe width="560px" height="405px" title="tutorial" src="https://www.youtube.com/embed/w3p3dBhQYko" frameBorder="0" allowfullscreen>
           </iframe>
           <div className="img-with-overlay">
             <img src={require('../images/carousel-07.jpg')} alt="Avatar" className="image"/>

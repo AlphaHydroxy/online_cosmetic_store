@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { isEmpty } from 'lodash'
 
 const urlForBrandName = brandName =>
   `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brandName}`
@@ -10,6 +9,7 @@ class Brands extends Component {
     this.state = {}
     this.buy = this.buy.bind(this);
   }
+
   componentDidMount() {
     fetch(urlForBrandName(this.props.brandName))
     .then(data => data.json())
@@ -17,7 +17,7 @@ class Brands extends Component {
       this.setState({
         makeUpData: data
       })
-      // console.log(this.state.makeUpData[0].product_colors[0].hex_value);
+      // console.log(this.state.makeUpData.product_colors.hex_value);
       })
   }
   
@@ -36,18 +36,14 @@ class Brands extends Component {
       return null;
     }
     const makeUpDetails = this.state.makeUpData.map((makeUp, index) => {
-
-      // console.log(makeUp.products_colors.length);
-      // if(make.product_colors.length)
-
-      // const mappedColours = !makeUp.isEmpty() ? makeUp.product_colors.map((colours, index) => {
-      //   const colourHex = colours.hex_value;
-      //   const colourName = colours.colour_name;
-      // }) : null;
-
-
-
-
+      const mappedColours =  makeUp.product_colors.map((colour, index) => {
+        const divStyle = {
+          width: '20px',
+          height: '20px',
+          backgroundColor: colour.hex_value
+        };
+        return (<div className="product-colour" style={divStyle}></div>);
+      });
         return (
             <div className="row mymodal">
               <div className="product-item" key={index}>
@@ -62,7 +58,7 @@ class Brands extends Component {
                       <div className="modal-header">
                         <h5 className="popout-header">{makeUp.name}</h5>
                         <img className="product-img" src={makeUp.image_link} alt={makeUp.name} />
-
+                        <div className="product-colour-container">{mappedColours}</div>
                         <p className="product-description">{makeUp.description}</p> 
                         <p>£{makeUp.price}</p>
                         <button className="btn btn-primary" onClick={() => this.buy(makeUp)}> Add to cart</button>
@@ -84,6 +80,3 @@ class Brands extends Component {
 }
 
 export default Brands;
-
-// <div className="swatches">{makeUp[product_colors].colour_name}
-// </div>
