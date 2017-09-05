@@ -11,8 +11,8 @@ Extensions:
 
 Allow users to browse by price (low - high / high - low)
 Allow users to amend shopping basket:-
-  Update quantity
-  Remove
-  “Checkout”
+Update quantity
+Remove
+“Checkout”
 Log in page
 Contact form
