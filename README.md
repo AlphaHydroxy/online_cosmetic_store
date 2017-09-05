@@ -4,7 +4,7 @@ With React and Sass, create an online cosmetic store:-
 
 Use the makeup API from https://makeup-api.herokuapp.com
 Allow users to search by brand/type/category etc
-Include an online shopping basket users can add items and track total
+Include an online shopping basket users can add items and track total (local storage)
 Allow users to view individual products and range of available colours
 
 Extensions:
@@ -16,3 +16,6 @@ Remove
 “Checkout”
 Log in page
 Contact form
+
+npm start
+npm run watch-css
