@@ -17,6 +17,6 @@ Extensions:
 - Log in page
 - Contact form
 
-npm start
-
-npm run watch-css
+To run:
+- npm start
+- npm run watch-css
